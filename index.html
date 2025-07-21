@@ -39,6 +39,15 @@
           #f0f4f8 70%
         );
       }
+      .scroll-animation {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .scroll-animation.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body class="main-bg text-gray-800">
@@ -140,7 +149,79 @@
           </div>
         </div>
       </main>
+      <section class="py-20" id="features">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Everything You Need. Nothing You Don't.
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 scroll-animation"
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 scroll-animation"
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 scroll-animation"
+            >
+              <div class="mb-6">
+                <img
+                  alt="Camera Icon"
+                  class="w-24 h-24 mx-auto"
+                  src="https://placehold.co/100x100/E3F2FD/1E6FBA?text=CAM"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-3">Record Your Camera</h3>
+              <p class="text-gray-600">
+                Personalize your message by recording your face.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+            >
+              <div class="mb-6">
+                <img
+                  alt="Screen Icon"
+                  class="w-24 h-24 mx-auto"
+                  src="https://placehold.co/100x100/E3F2FD/1E6FBA?text=SCREEN"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-3">Record Your Screen</h3>
+              <p class="text-gray-600">
+                Show your work, explain a concept, or give a demo.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+            >
+              <div class="mb-6">
+                <img
+                  alt="Microphone Icon"
+                  class="w-24 h-24 mx-auto"
+                  src="https://placehold.co/100x100/E3F2FD/1E6FBA?text=MIC"
+                />
+              </div>
+              <h3 class="text-xl font-bold mb-3">Record Your Microphone</h3>
+              <p class="text-gray-600">
+                Add your voice to your recordings for clear communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+          <p>&copy; 2024 LoomLite. All rights reserved.</p>
+          <div class="mt-4">
+            <a href="#features" class="text-gray-400 hover:text-white mx-2"
+              >Features</a
+            >
+            <a href="#contact" class="text-gray-400 hover:text-white mx-2"
+              >Contact</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white mx-2"
+              >Privacy Policy</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
-    <script src="./src//main.ts" type="module"></script>
+    <script src="./src/main.ts" type="module"></script>
   </body>
 </html>
